@@ -1,0 +1,160 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap");
+
+:root {
+  --softRed: hsl(10, 79%, 65%);
+  --cyan: hsl(186, 34%, 60%);
+
+  --darkbrown: hsl(25, 47%, 15%);
+  --mediumbrown: hsl(28, 10%, 53%);
+  --cream: hsl(27, 66%, 92%);
+  --verypaleOrange: hsl(33, 100%, 98%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+  font-size: 18px;
+}
+
+.container {
+  height: 100vh;
+  width: 100%;
+  background-color: var(--cream);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wrapper {
+  width: 90%;
+  max-width: 600px;
+}
+
+.wrapper .balance {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--softRed);
+  padding: 1.3rem;
+  border-radius: 20px;
+  margin-bottom: 1.2rem;
+}
+
+.wrapper .balance .left {
+  color: white;
+}
+.wrapper .balance .left p {
+  margin-bottom: 7px;
+  font-weight: 500;
+  color: var(--verypaleOrange);
+}
+
+.wrapper .balance .left h1 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.spending {
+  background-color: var(--verypaleOrange);
+  padding: 1.3rem;
+  border-radius: 20px;
+}
+.spending h1 {
+  font-size: 2rem;
+  color: var(--darkbrown);
+  margin-bottom: 1rem;
+}
+
+.spending .chart_box {
+  display: flex;
+  align-items: flex-end;
+  gap: 5px;
+  justify-content: center;
+}
+
+.chart_box .col_box {
+  align-items: center;
+}
+
+.chart_box .column {
+  width: 50px;
+}
+
+.chart_box .column:hover .title {
+  opacity: 1;
+}
+
+.chart_box .title {
+  background-color: var(--darkbrown);
+  width: 100%;
+  color: white;
+  border-radius: 5px;
+  padding: 3px;
+  font-size: 0.8rem;
+  display: inline-block;
+  margin-bottom: 1rem;
+  opacity: 0;
+  transition: all 0.3 ease;
+}
+
+.chart_box .col_bar {
+  display: inline-block;
+  width: 80%;
+  background: var(--softRed);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.chart_box .col_bar:hover {
+  background-color: rgb(238, 139, 119);
+}
+
+.chart_box .max {
+  background-color: var(--cyan);
+}
+
+.chart_box .max:hover {
+  background-color: hsl(186, 40%, 68%);
+}
+
+.spending hr {
+  margin: 1rem;
+  background-color: var(--mediumbrown);
+  height: 2px;
+  border: 0;
+}
+
+.spending .total {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.spending .total .total_left p {
+  color: var(--mediumbrown);
+  margin-bottom: 0.5rem;
+}
+
+.spending .total .total_right {
+  margin-bottom: 5px;
+}
+.spending .total .total_right p {
+  color: var(--mediumbrown);
+}
+
+.spending .total .total_right h2 {
+  color: var(--darkbrown);
+  text-align: right;
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
